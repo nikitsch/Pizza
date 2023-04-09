@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
+import AddPizzaForm from "./components/AddPizzaForm";
 import './App.css';
 
+const App = () => {
+  const [pizzasList, setPizzasList] = useState([]);
 
-function App() {
   return (
     <div className="App">
-      New App!
+      <div className="wrap">
+        <span className='heading'>Наша пиццерия</span>
+        <AddPizzaForm />
+      </div>
     </div>
   );
 }
